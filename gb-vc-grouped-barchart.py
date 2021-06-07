@@ -16,15 +16,14 @@ import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-print('Seaborn version: ', sns.__version__)
+print('Seaborn version: ', sns.__version__, '\n')
 
-print()
-print(sns.get_dataset_names())
+print(sns.get_dataset_names(), '\n')
 
 # load dataset
 df = sns.load_dataset('penguins')
 
-print(df.head())
+print(df.head(), '\n')
 
 # set the .groupby() col, the .value_counts() col, and normalize as % 
 # notice the transpose `.T`
@@ -43,4 +42,3 @@ plt.ylabel('% of Total')
 plt.show()
 
 print(dfu)
-
