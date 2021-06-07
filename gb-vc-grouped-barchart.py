@@ -32,6 +32,9 @@ gb_col_name = 'sex'
 str_col_name = 'island'
 dfu = df.groupby([gb_col_name])[str_col_name].value_counts(dropna=False, normalize=True).unstack().T
 
+# sort by first column
+dfu = dfu.sort_values(dfu.columns[0])
+
 # plot
 dfu.plot.bar(figsize=(7, 5))
 plt.legend(title=gb_col_name, bbox_to_anchor=(1.05, 1), loc='upper left')
