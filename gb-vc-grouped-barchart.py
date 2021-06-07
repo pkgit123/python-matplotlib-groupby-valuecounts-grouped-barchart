@@ -36,6 +36,7 @@ dfu = dfu.sort_values(dfu.columns[0])
 
 # plot
 dfu.plot.bar(figsize=(7, 5))
+plt.title(f"Grouped barchart: % of Total by `{str_col_name}`, groupby `{gb_col_name}`")
 plt.legend(title=gb_col_name, bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.xlabel(str_col_name)
 plt.ylabel('% of Total')
